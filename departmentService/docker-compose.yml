@@ -22,3 +22,14 @@ services:
     depends_on:
       - mysqldb
     restart: always
+   employeeService:
+    image: empimg
+    ports:
+      - "9992:8082"
+    environment:
+      - DB_URL=jdbc:mysql://mysqldb:3306/mysql 
+      - DB_USERNAME=root
+      - DB_PASSWORD=root
+    depends_on:
+      - mysqldb
+    restart: always
