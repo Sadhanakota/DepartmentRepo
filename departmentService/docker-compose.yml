@@ -12,7 +12,7 @@ services:
       timeout: 5s
       retries: 5
    department-service:
-    image: deptImg
+    image: deptimg
     ports:
       - "9991:8084"
     environment:
